@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LD2450 X/Y Radar</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="top">
+        <div>
+          <p class="eyebrow">Bird's-eye presence</p>
+          <h1>LD2450 X/Y Radar</h1>
+        </div>
+        <div class="status" id="linkStatus">connecting…</div>
+      </header>
+
+      <section class="stage">
+        <canvas id="radar" width="720" height="720" aria-label="Radar map"></canvas>
+        <aside class="panel">
+          <div class="metric">
+            <span>Presence</span>
+            <strong id="presence">—</strong>
+          </div>
+          <div class="metric">
+            <span>Targets</span>
+            <strong id="targetCount">0</strong>
+          </div>
+          <div class="metric">
+            <span>Nearest</span>
+            <strong id="nearest">—</strong>
+          </div>
+          <div class="metric">
+            <span>Range</span>
+            <strong id="range">6.0 m</strong>
+          </div>
+          <p class="hint">
+            Sensor is at the center, with forward at the top. Red dots are the
+            real X/Y positions reported by the LD2450 (up to three targets).
+          </p>
+        </aside>
+      </section>
+    </main>
+    <script src="/static/app.js"></script>
+  </body>
+</html>
